@@ -56,13 +56,13 @@ programs() {
 
   echo "...Installing programs"
   # Basics
-  pacman -S --needed --noconfirm wezterm xclip libreoffice-still noto-fonts-emoji noto-fonts-extra ttf-font-awesome firefox-developer-edition
+  sudo pacman -S --needed --noconfirm wezterm xclip libreoffice-still noto-fonts-emoji noto-fonts-extra ttf-font-awesome firefox-developer-edition
 
   # Tools
-  pacman -S --needed --noconfirm keepassxc zoxide glow nodejs-lts-iron npm ripgrep nvtop obsidian
+  sudo pacman -S --needed --noconfirm keepassxc zoxide glow nodejs-lts-iron npm ripgrep nvtop obsidian
 
   # Entertainment
-  pacman -S --needed --noconfirm spotify-launcher discord signal-desktop
+  sudo pacman -S --needed --noconfirm spotify-launcher discord signal-desktop
 
   # AUR
   yay -S --noconfirm --needed dropbox neovim-git tmux-bash-completion-git
@@ -72,7 +72,6 @@ programs() {
 configs() {
   echo "...Setting all configs"
   cp -lfr ./configs/* $HOME/.config/
-  cp -lfr ./configs/.* $HOME/.config/
   echo "...Done"
 }
 
