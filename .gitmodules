@@ -1,0 +1,6 @@
+[submodule "external/neovim"]
+	path = external/neovim
+	url = https://github.com/Retr05041/neovim
+[submodule "external/mybashrc"]
+	path = external/mybashrc
+	url = https://github.com/Retr05041/mybashrc
