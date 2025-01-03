@@ -16,6 +16,9 @@
 - Network configuration = Use Networkmanager
  
 ## Post-install
+
+`git submodule update --init --recursive`
+
 `besmart.sh -a`
 
 `sudo reboot now`
