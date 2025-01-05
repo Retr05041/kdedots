@@ -46,7 +46,7 @@ fi
 addHackFont() {
   if ! [ -f "/usr/share/fonts/HackNerdFont-Regular.ttf" ]; then
     echo "...Setting fonts"
-    cp ./fonts/HackNerdFont-Regular.ttf "/usr/share/fonts"
+    sudo cp ./fonts/HackNerdFont-Regular.ttf "/usr/share/fonts"
     echo "...Done"
   fi
 }
@@ -56,7 +56,7 @@ programs() {
 
   echo "...Installing programs"
   # Basics
-  sudo pacman -S --needed --noconfirm wezterm xclip libreoffice-still noto-fonts-emoji noto-fonts-extra ttf-font-awesome firefox-developer-edition
+  sudo pacman -S --needed --noconfirm wezterm xclip libreoffice-still noto-fonts-emoji noto-fonts-extra ttf-font-awesome firefox-developer-edition less
 
   # Tools
   sudo pacman -S --needed --noconfirm keepassxc zoxide glow nodejs-lts-iron npm ripgrep nvtop obsidian
