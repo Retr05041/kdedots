@@ -44,10 +44,10 @@ if ! [[ $(command -v yay) ]]; then
 fi
 
 addHackFont() {
-  if ! [ -f "/usr/share/fonts/HackNerdFont-Regular.ttf" ]; then
-    echo "...Setting fonts"
-    sudo cp ./fonts/HackNerdFont-Regular.ttf "/usr/share/fonts"
-    echo "...Done"
+  if ! [ -d "/usr/share/fonts/nerdfonts" ]; then
+    sudo mkdir -p /usr/share/fonts/nerdfonts
+    sudo mv ./fonts/* /usr/share/fonts/nerdfonts/
+    sudo fc-cache -fv
   fi
 }
 
@@ -65,7 +65,7 @@ programs() {
   sudo pacman -S --needed --noconfirm spotify-launcher discord signal-desktop
 
   # AUR
-  yay -S --noconfirm --needed dropbox neovim-git tmux-bash-completion-git
+  yay -S --noconfirm --needed dropbox neovim-git 
   echo "...done"
 }
 
@@ -74,7 +74,7 @@ configs() {
   cp -lfr ./configs/* $HOME/.config/
 
   ./external/mybashrc/load.sh
-  ./external/neovim/load.sh
+  # ./external/neovim/load.sh
   echo "...Done"
 }
 
