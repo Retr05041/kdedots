@@ -74,7 +74,6 @@ configs() {
   cp -lfr ./configs/* $HOME/.config/
 
   ./external/mybashrc/load.sh
-  # ./external/neovim/load.sh
   echo "...Done"
 }
 
