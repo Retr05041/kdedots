@@ -59,13 +59,13 @@ programs() {
   sudo pacman -S --needed --noconfirm wezterm xclip libreoffice-still noto-fonts-emoji noto-fonts-extra ttf-font-awesome firefox-developer-edition less wl-clipboard
 
   # Tools
-  sudo pacman -S --needed --noconfirm keepassxc zoxide glow nodejs-lts-iron npm ripgrep nvtop obsidian
+  sudo pacman -S --needed --noconfirm keepassxc zoxide glow nodejs-lts-iron npm ripgrep nvtop obsidian jdk-openjdk
 
   # Entertainment
-  sudo pacman -S --needed --noconfirm spotify-launcher discord signal-desktop
+  sudo pacman -S --needed --noconfirm spotify-launcher discord signal-desktop prismlauncher
 
   # AUR
-  yay -S --noconfirm --needed dropbox neovim-git 
+  yay -S --noconfirm --needed dropbox neovim-git vscodium
   echo "...done"
 }
 
